@@ -1,7 +1,7 @@
 {
-  "name": "monad-farcaster-miniapp-template",
+  "name": "monad-dots",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -39,5 +39,15 @@
     "onlyBuiltDependencies": [
       "@biomejs/biome"
     ]
+  },
+  "description": "A Two Dots-inspired puzzle game with Monad purple theming.",
+  "author": "Monad Developers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monad-developers/monad-dots.git"
+  },
+  "homepage": "https://monad-dots.example.com",
+  "bugs": {
+    "url": "https://github.com/monad-developers/monad-dots/issues"
   }
 }

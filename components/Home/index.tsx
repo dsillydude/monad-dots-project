@@ -1,20 +1,24 @@
-'use client'
+// Home Component
+import React from 'react';
+import MonadDots from '../game/MonadDots';
 
-import { FarcasterActions } from '@/components/Home/FarcasterActions'
-import { User } from '@/components/Home/User'
-import { WalletActions } from '@/components/Home/WalletActions'
+const Home: React.FC = () => {
+    return (
+        <div>
+            <h1>Welcome to Monad Dots</h1>
+            <MonadDots />
+        </div>
+    );
+};
 
-export function Demo() {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-4 space-y-8">
-      <h1 className="text-3xl font-bold text-center">
-        Monad Farcaster MiniApp Template
-      </h1>
-      <div className="w-full max-w-4xl space-y-6">
-        <User />
-        <FarcasterActions />
-        <WalletActions />
-      </div>
-    </div>
-  )
-}
+// Export Demo function for compatibility with the template
+export const Demo: React.FC = () => {
+    return (
+        <div>
+            <h2>Demo of Monad Dots Game</h2>
+            <MonadDots />
+        </div>
+    );
+};
+
+export default Home;

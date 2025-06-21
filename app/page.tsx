@@ -1,35 +1,24 @@
-import App from '@/components/pages/app'
-import { APP_URL } from '@/lib/constants'
-import type { Metadata } from 'next'
+// App Page
+import React from 'react';
+import { APP_URL } from '../lib/constants';
+import Home from '../components/Home';
 
-const frame = {
-  version: 'next',
-  imageUrl: `${APP_URL}/images/feed.png`,
-  button: {
-    title: 'Launch Template',
-    action: {
-      type: 'launch_frame',
-      name: 'Monad Farcaster MiniApp Template',
-      url: APP_URL,
-      splashImageUrl: `${APP_URL}/images/splash.png`,
-      splashBackgroundColor: '#f7f7f7',
-    },
-  },
-}
-
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: 'Monad Farcaster MiniApp Template',
+export const generateMetadata = () => ({
+    title: 'Monad Dots',
+    description: 'Experience the fun and challenge of connecting dots in the Monad Dots game!',
     openGraph: {
-      title: 'Monad Farcaster MiniApp Template',
-      description: 'A template for building mini-apps on Farcaster and Monad',
+        title: 'Monad Dots',
+        description: 'Experience the fun and challenge of connecting dots in the Monad Dots game!',
+        images: [`${APP_URL}/opengraph-image.png`],
     },
     other: {
-      'fc:frame': JSON.stringify(frame),
+        'fc:frame': 'vNext',
+        'fc:frame:image': `${APP_URL}/opengraph-image.png`,
+        'fc:frame:post_url': `${APP_URL}/api/frame`,
+        'fc:frame:button:1': 'Play Monad Dots',
     },
-  }
-}
+});
 
-export default function Home() {
-  return <App />
+export default function Page() {
+    return <Home />;
 }
